@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage"
+version = "0.1.0"
+description = "Demo package"
+authors = [{name = "You", email = "you@example.com"}]
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+where = ["mypackage"]
