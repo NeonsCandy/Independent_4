@@ -1,0 +1,13 @@
+[Unit]
+Description=Test service writing to /tmp/test.log every minute
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'echo \"$(date): Service is running\" >> /tmp/test.log'
+WorkingDirectory=/tmp
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
